@@ -3,7 +3,7 @@ export default {
     {
       id: 0,
       title: "example one",
-      image: "./path...",
+      image: "../assets/default-food.png",
       description:
         "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       ingredients: [
@@ -26,7 +26,7 @@ export default {
     {
       id: 1,
       title: "example two",
-      image: "./path...",
+      image: "../assets/default-food.png",
       description:
         "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       ingredients: [
