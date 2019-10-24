@@ -1,20 +1,20 @@
 import React from "react";
 import data from "../model/data";
 
-const RecipePage = () => {
+const RecipePage = ({ id }) => {
   return (
     <section>
-      <h2>{data.recipes[0].title}</h2>
-      <img src={data.recipes[0].image} alt={data.recipes[0].title} />
-      <p>{data.recipes[0].description}</p>
+      <h2>{data.recipes[id].title}</h2>
+      <img src={data.recipes[id].image} alt={data.recipes[id].title} />
+      <p>{data.recipes[id].description}</p>
       <ul>
-        {data.recipes[0].ingredients.map(ingredient => (
-          <li>{ingredient}</li>
+        {data.recipes[id].ingredients.map((ingredient, index) => (
+          <li key={index}>{ingredient}</li>
         ))}
       </ul>
       <ol>
-        {data.recipes[0].method.map(step => (
-          <li>{step}</li>
+        {data.recipes[id].method.map((step, index) => (
+          <li key={index}>{step}</li>
         ))}
       </ol>
     </section>

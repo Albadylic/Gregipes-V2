@@ -12,7 +12,11 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/results" component={Results} />
-          <Route exact path="/recipe" component={RecipePage} />
+          <Route
+            exact
+            path="/recipe/:id"
+            render={({ match }) => <RecipePage id={Number(match.params.id)} />}
+          />
         </Switch>
       </Router>
     </section>
