@@ -4,10 +4,11 @@ import RecipeCard from "./RecipeCard";
 
 const Results = () => {
   return (
-    <section>
-      <h2>Welcome Results</h2>
-      {data.recipes.map(recipe => (
+    <section id="results__container">
+      <h2 id="results__title">Welcome Results</h2>
+      {data.recipes.map((recipe, index) => (
         <RecipeCard
+          key={index}
           title={recipe.title}
           description={recipe.description}
           image={recipe.image}
