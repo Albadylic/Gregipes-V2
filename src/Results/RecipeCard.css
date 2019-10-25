@@ -1,0 +1,12 @@
+.recipe-card__container {
+  width: 45vw;
+  height: 35vh;
+  box-shadow: 0.6em 0.4em 0.4em #e5e6e0;
+  padding: 0.4em;
+  border: solid black 0.1em;
+  margin: 0.4em;
+}
+
+.recipe-card__image {
+  width: 10vw;
+}
