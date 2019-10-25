@@ -1,9 +1,12 @@
+import defaultFood from "../assets/default-food.png";
+import defaultMusic from "../assets/default-music.png";
+
 export default {
   recipes: [
     {
       id: 0,
       title: "example one",
-      image: "../assets/default-food.png",
+      image: defaultFood,
       description:
         "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       ingredients: [
@@ -26,7 +29,7 @@ export default {
     {
       id: 1,
       title: "example two",
-      image: "../assets/default-food.png",
+      image: defaultMusic,
       description:
         "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       ingredients: [
