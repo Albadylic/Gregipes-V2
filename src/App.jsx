@@ -9,8 +9,8 @@ import RecipePage from "./RecipePage/RecipePage";
 const App = () => {
   return (
     <section className="App">
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/results" component={Results} />
