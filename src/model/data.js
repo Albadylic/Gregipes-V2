@@ -17,11 +17,11 @@ export default {
       ],
       method: [
         "Combine dry ingredients in a large bowl, stir and make a well in the centre",
-        "Add oil and then cold water and mix together, intially with a wood spoon and once more coherent then by hand",
-        "Knead on a well floured suface for five minutes",
-        "Stretch and tuck sides for five minutes",
-        "Knead for a further five minutes",
-        "Cover and let rest in a warm place until doubled in size",
+        "Add oil and then cold water and mix together, intially with a wood spoon and once more coherent then by hand.",
+        "Knead on a well floured suface for five minutes.",
+        "Stretch and tuck sides for five minutes.",
+        "Knead for a further five minutes.",
+        "Cover and let rest in a warm place until doubled in size.",
         "Stretch across an oiled baking sheet. If the dough does not reach the edges, cover for 15 minutes and then stretch again.",
         "Allow to prove for another hour or overnight.",
         "Using your fingers, press dimples into the surface of the bread.",
@@ -43,7 +43,7 @@ export default {
         "1 tsp Salt",
         "1 tbsp Golden Syrup",
         "2 tbsp Olive Oil",
-        "75ml warm water"
+        "75ml Warm Water"
       ],
       method: [
         "Mix flour, yeast and salt in a bowl before adding water, syrup and oil.",
@@ -69,7 +69,7 @@ export default {
         "1/2 tsp Sugar",
         "150ml Warm Water",
         "2 tbsp Yoghurt",
-        "2 cloves of garlic",
+        "2 Cloves of Garlic",
         "Handful of Coriander Leaves"
       ],
       method: [
@@ -85,49 +85,59 @@ export default {
       ]
     },
     {
-      id: 1,
-      title: "example two",
+      id: 3,
+      title: "Red Curry Paste",
       image: defaultFood,
-      description:
-        "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+      description: "A spicy red curry paste.",
       ingredients: [
-        "2ingr1",
-        "2ingr2",
-        "2ingr3",
-        "2ingr4",
-        "2ingr5",
-        "2ingr6",
-        "2ingr7"
+        "1 Red Chilli",
+        "1 Stem of Lemongrass",
+        "2-inch Piece of Ginger",
+        "1 Small Sweet Onion",
+        "2 Cloves of Garlic",
+        "1 tsp Coriander Seeds",
+        "1 tsp Cumin Seeds",
+        "Zest and Juice of a Lime",
+        "2 tsp Hot Paprika"
       ],
       method: [
-        "Second recipe First, put the things in the pan",
-        " Second recipe Then cook them a little",
-        "Second recipe Mix some things together",
-        "Second recipe add a garnish",
-        "Second recipe and serve the dish with salad"
+        "Peel and roughly chop the ginger, garlic and onion.",
+        "De-seed the chilli (if desired) and roughly chop.",
+        "Peel layers from the lemongrass until you find a soft one. The way to tell is that your nail can be pressed in without much resistance.",
+        "Lightly fry coriander and cumin seeds until aromatic.",
+        "Combine all ingredients in a small blender and blitz until combined.",
+        "To preserve this, add a few tablespoons of oil when blending and store in airtight jar in the fridge."
       ]
     },
     {
-      id: 1,
-      title: "example two",
+      id: 4,
+      title: "Red Chickpea Coconut Curry",
       image: defaultFood,
-      description:
-        "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+      description: "A hot and sweet curry.",
       ingredients: [
-        "2ingr1",
-        "2ingr2",
-        "2ingr3",
-        "2ingr4",
-        "2ingr5",
-        "2ingr6",
-        "2ingr7"
+        "1 Small Onion",
+        "1 can of Chickpeas",
+        "1 can of Coconut Milk",
+        "Handful of Fresh Thai Basil",
+        "Handful of Fresh Coriander",
+        "1 Red Pepper",
+        "2 Large Tomatoes",
+        "3 Handfuls of Spinach",
+        "1 tsp Turmeric",
+        "2 tsp Curry Powder",
+        "1-2 tbsp Red Curry pPaste",
+        "1 Cup of Vegetable (or Chicken) Stock",
+        "Lime Wedges for Serving"
       ],
       method: [
-        "Second recipe First, put the things in the pan",
-        " Second recipe Then cook them a little",
-        "Second recipe Mix some things together",
-        "Second recipe add a garnish",
-        "Second recipe and serve the dish with salad"
+        "Create a curry paste as per Red Curry Paste Recipe.",
+        "Fry onion until it is translucent.",
+        "Add the red pepper and fry until starting to soften.",
+        "Add curry paste, tomatoes and spices. Allow to simmer and cook off some liquid from the tomatoes.",
+        "Add chickpeas, stock and coconut milk.",
+        "Allow to stew for at least 20 minutes and up to a few hours, stirring often.",
+        "A few minutes before servng add the spinach and fresh herbs.",
+        "Service with white rice and a wedge of lime."
       ]
     }
   ]
