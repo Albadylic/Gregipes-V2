@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import data from "../model/data";
+import { Link } from "react-router-dom";
 
 const genRandomIndex = () => {
   const index = Math.floor(Math.random() * data.recipes.length);
@@ -50,9 +51,12 @@ const useInterval = (callback, delay) => {
 };
 
 const Slider = () => {
+  const recipeEndpoint = "/recipe/" + indexArray[Counter()];
   return (
     <article id="slider__container">
-      <h3>{data.recipes[indexArray[Counter()]].title}</h3>
+      <Link to={recipeEndpoint}>
+        <h3>{data.recipes[indexArray[Counter()]].title}</h3>
+      </Link>
       <img
         src={data.recipes[indexArray[Counter()]].image}
         alt={data.recipes[indexArray[Counter()]].title}
