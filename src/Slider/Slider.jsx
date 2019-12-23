@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import data from "../model/data";
 import { Link } from "react-router-dom";
+import "./Slider.css";
 
 const genRandomIndex = () => {
   const index = Math.floor(Math.random() * data.recipes.length);
@@ -55,13 +56,16 @@ const Slider = () => {
   return (
     <article id="slider__container">
       <Link to={recipeEndpoint}>
-        <h3>{data.recipes[indexArray[Counter()]].title}</h3>
+        <h3 id="slider__title">{data.recipes[indexArray[Counter()]].title}</h3>
       </Link>
       <img
         src={data.recipes[indexArray[Counter()]].image}
         alt={data.recipes[indexArray[Counter()]].title}
+        id="slider__image"
       />
-      <p>{data.recipes[indexArray[Counter()]].description}</p>
+      <p id="slider__description">
+        {data.recipes[indexArray[Counter()]].description}
+      </p>
     </article>
   );
 };
