@@ -1,8 +1,6 @@
 #slider__container {
-  background-color: #777;
+  background-color: #fff999;
   width: 80vw;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+  border-radius: 2.5em;
+  border: double 0.4em white;
 }
