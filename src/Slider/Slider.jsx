@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import data from "../model/data";
+import genRandomIndex from "../utils/genRandomIndex";
 import { Link } from "react-router-dom";
 import "./Slider.css";
 
-const genRandomIndex = () => {
-  const index = Math.floor(Math.random() * data.recipes.length);
-  return index;
-};
+// **TODO**
+// Remove the array of Indexes if possible or otherwise simplify this
+// In order to add in keypress functionality, the Counter will need to be more reactive
+// Read up on what is happening in useRef
+// Simplify component so that we're not using indexArray[Counter()] but something simpler instead
 
 const indexArray = [];
 while (indexArray.length < 3) {
-  const randomIndex = genRandomIndex();
+  const randomIndex = genRandomIndex(data.recipes);
   if (indexArray.indexOf(randomIndex) < 0) {
     indexArray.push(randomIndex);
   }
