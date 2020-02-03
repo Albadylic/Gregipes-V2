@@ -4,11 +4,6 @@ import genRandomIndex from "../utils/genRandomIndex";
 import { Link } from "react-router-dom";
 import "./Slider.css";
 
-// **TODO**
-// Remove the array of Indexes if possible or otherwise simplify this
-// Simplify component so that we're not using indexArray[visibleRecipe()] but something simpler instead
-// In order to add in PlayPause&&keypress functionality, the visibleRecipe will need to be more reactive
-
 // Create an array which contains the indexes of three random recipes
 
 const indexArray = [];
@@ -19,14 +14,12 @@ while (indexArray.length < 3) {
   }
 }
 
-// This function will show one recipe at a time and will shift the visible recipe at a fixed interval
+// This function will show one recipe at a time and will shift the visible recipe at a given interval
+
 const VisibleRecipe = delay => {
   const [visibleIndex, setVisibleIndex] = useState(0);
 
-  // If play===true (i.e. if button is clicked)
-  // When an arrow key is pressed, this should be paused and reset
-  // I think that the logic inside (i.e. the if) could be used when the right arrow key is pressed also
-  // The logic can be reversed for a press of left
+  // When an arrow key is pressed, move left or right
 
   useEffect(() => {
     const moveLeft = () => {
@@ -92,10 +85,6 @@ const useInterval = (callback, delay) => {
     }
   }, [delay]);
 };
-
-// Add functions for move left and right.
-
-// Add event listeners inside a useEffect
 
 // Component
 
