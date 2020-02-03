@@ -20,7 +20,7 @@ while (indexArray.length < 3) {
 }
 
 // This function will show one recipe at a time and will shift the visible recipe at a fixed interval
-const VisibleRecipe = () => {
+const VisibleRecipe = delay => {
   const [visibleIndex, setVisibleIndex] = useState(0);
 
   // If play===true (i.e. if button is clicked)
@@ -34,7 +34,7 @@ const VisibleRecipe = () => {
     } else {
       setVisibleIndex(0);
     }
-  }, 4000);
+  }, delay);
 
   return visibleIndex;
 };
@@ -71,24 +71,34 @@ const useInterval = (callback, delay) => {
 
 const Slider = () => {
   const recipeEndpoint = "/recipe/" + indexArray[VisibleRecipe()];
+  const [isPlaying, setIsPlaying] = useState(4000);
+
+  const updatePlayStatus = () => {
+    if (isPlaying) {
+      setIsPlaying(null);
+    } else {
+      setIsPlaying(4000);
+    }
+  };
+
   return (
     <section id="slider__container">
       <Link to={recipeEndpoint}>
         <h3 id="slider__title">
-          {data.recipes[indexArray[VisibleRecipe()]].title}
+          {data.recipes[indexArray[VisibleRecipe(isPlaying)]].title}
         </h3>
       </Link>
       <img
-        src={data.recipes[indexArray[VisibleRecipe()]].image}
-        alt={data.recipes[indexArray[VisibleRecipe()]].title}
+        src={data.recipes[indexArray[VisibleRecipe(isPlaying)]].image}
+        alt={data.recipes[indexArray[VisibleRecipe(isPlaying)]].title}
         id="slider__image"
       />
       <p id="slider__description">
-        {data.recipes[indexArray[VisibleRecipe()]].description}
+        {data.recipes[indexArray[VisibleRecipe(isPlaying)]].description}
       </p>
       <article id="slider__buttons">
         <button>Left</button>
-        <button>Play/Pause</button>
+        <button onClick={updatePlayStatus}>Play/Pause</button>
         <button>Right</button>
       </article>
     </section>
