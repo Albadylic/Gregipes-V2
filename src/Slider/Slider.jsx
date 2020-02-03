@@ -28,6 +28,36 @@ const VisibleRecipe = delay => {
   // I think that the logic inside (i.e. the if) could be used when the right arrow key is pressed also
   // The logic can be reversed for a press of left
 
+  useEffect(() => {
+    const moveLeft = () => {
+      if (visibleIndex > 0) {
+        setVisibleIndex(visibleIndex => visibleIndex - 1);
+      } else {
+        setVisibleIndex(2);
+      }
+    };
+
+    const moveRight = () => {
+      if (visibleIndex < 2) {
+        setVisibleIndex(visibleIndex => visibleIndex + 1);
+      } else {
+        setVisibleIndex(0);
+      }
+    };
+
+    const handleKeyDown = event => {
+      if (event.key === "ArrowLeft") {
+        moveLeft();
+      } else if (event.key === "ArrowRight") {
+        moveRight();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [visibleIndex]);
+
   useInterval(() => {
     if (visibleIndex < 2) {
       setVisibleIndex(visibleIndex => visibleIndex + 1);
