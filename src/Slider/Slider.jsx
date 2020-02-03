@@ -127,9 +127,7 @@ const Slider = () => {
         {data.recipes[indexArray[VisibleRecipe(isPlaying)]].description}
       </p>
       <article id="slider__buttons">
-        <button>Left</button>
         <button onClick={updatePlayStatus}>Play/Pause</button>
-        <button>Right</button>
       </article>
     </section>
   );
