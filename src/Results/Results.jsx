@@ -2,12 +2,34 @@ import React from "react";
 import data from "../model/data";
 import RecipeCard from "./RecipeCard";
 import "./Results.css";
+import styled from "styled-components";
+import {
+  compose,
+  color,
+  display,
+  flexWrap,
+  justifyContent
+} from "styled-system";
+
+const SectionContainer = styled.section`
+  ${color}
+`;
+
+const CardContainer = styled(SectionContainer)`
+  ${compose(display, flexWrap, justifyContent)}
+`;
+
+CardContainer.defaultProps = {
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center"
+};
 
 const Results = () => {
   return (
-    <section id="results__container">
+    <SectionContainer bg="#FFFCD8" color="#258EA6">
       <h2 id="results__title">Results</h2>
-      <section id="results__card-container">
+      <CardContainer>
         {data.recipes.map((recipe, index) => (
           <RecipeCard
             key={index}
@@ -19,8 +41,8 @@ const Results = () => {
             method={recipe.method}
           />
         ))}
-      </section>
-    </section>
+      </CardContainer>
+    </SectionContainer>
   );
 };
 

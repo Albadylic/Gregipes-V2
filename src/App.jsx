@@ -5,23 +5,29 @@ import Header from "./Header/Header";
 import Home from "./Home/Home";
 import Results from "./Results/Results";
 import RecipePage from "./RecipePage/RecipePage";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
 
 const App = () => {
   return (
-    <section className="App">
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/results" component={Results} />
-          <Route
-            exact
-            path="/recipe/:id"
-            render={({ match }) => <RecipePage id={Number(match.params.id)} />}
-          />
-        </Switch>
-      </Router>
-    </section>
+    <ThemeProvider theme={theme}>
+      <section className="App">
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/results" component={Results} />
+            <Route
+              exact
+              path="/recipe/:id"
+              render={({ match }) => (
+                <RecipePage id={Number(match.params.id)} />
+              )}
+            />
+          </Switch>
+        </Router>
+      </section>
+    </ThemeProvider>
   );
 };
 
